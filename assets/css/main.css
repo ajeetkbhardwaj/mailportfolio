@@ -392,7 +392,7 @@ section h2 {
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 22px;
 }
 
@@ -442,9 +442,86 @@ section h2 {
   font-size: 0.88rem;
 }
 
-.education-card > p:last-child {
+.education-card > p {
   color: #475569;
   font-size: 0.94rem;
+}
+
+.education-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.section-heading-split {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.section-link {
+  flex: 0 0 auto;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.certificate-card {
+  display: flex;
+  min-height: 250px;
+  padding: 24px;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certificate-card:hover {
+  border-color: #b7c7ef;
+  color: var(--text);
+  box-shadow: var(--shadow-hover);
+  text-decoration: none;
+  transform: translateY(-4px);
+}
+
+.certificate-provider {
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.certificate-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+  line-height: 1.4;
+}
+
+.certificate-card h3 + p {
+  flex: 1;
+  color: #475569;
+  font-size: 0.91rem;
+}
+
+.certificate-card span {
+  margin-top: 20px;
+  color: var(--accent-dark);
+  font-size: 0.87rem;
+  font-weight: 750;
 }
 
 .skills-grid {
@@ -596,48 +673,6 @@ section h2 {
   font-weight: 700;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.contact-card {
-  display: block;
-  padding: 22px 16px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: #fbfcff;
-  color: var(--text);
-  text-align: center;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-card:hover {
-  border-color: #b7c7ef;
-  color: var(--text);
-  box-shadow: var(--shadow-hover);
-  text-decoration: none;
-  transform: translateY(-3px);
-}
-
-.contact-card .icon {
-  margin-bottom: 7px;
-  color: var(--accent);
-  font-size: 1.45rem;
-}
-
-.contact-card h3 {
-  margin-bottom: 3px;
-  font-size: 0.95rem;
-}
-
-.contact-card p {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
 .page {
   padding: 56px 0 80px;
 }
@@ -653,15 +688,42 @@ section h2 {
 }
 
 footer {
-  padding: 34px 0;
+  padding: 24px 0;
   border-top: 1px solid var(--border);
+  background: #fbfcff;
   color: var(--muted);
-  font-size: 0.88rem;
-  text-align: center;
+  font-size: 0.85rem;
 }
 
-footer a {
-  color: var(--muted);
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.footer-links a {
+  padding: 5px 9px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  color: #526075;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  border-color: #b7c7ef;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  text-decoration: none;
 }
 
 .prose h2 {
@@ -735,12 +797,14 @@ footer a {
   }
 
   .skills-grid,
-  .card-grid {
+  .card-grid,
+  .certificate-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .contact-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .certificate-card-wide {
+    grid-column: 1 / -1;
+    min-height: 0;
   }
 }
 
@@ -810,10 +874,20 @@ footer a {
   }
 
   .education-grid,
+  .certificate-grid,
   .skills-grid,
-  .card-grid,
-  .contact-grid {
+  .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-heading-split,
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
   }
 }
 
