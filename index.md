@@ -12,7 +12,7 @@ title: "Portfolio"
       <div class="about-copy">
         <p class="lead"><strong>Currently looking for a job.</strong> I was a Research Intern and Project Assistant at the Cloud Computing Lab and HIPC Lab, IIT Delhi under <a href="https://abhilash-jindal.com/">Prof. Abhilash Jindal</a>, where I focused on building and evaluating LLM-based tools called <a href="https://github.com/ajeetkbhardwaj/Speculator">Speculator</a> and designing multi-agentic systems such as <a href="https://github.com/ajeetkbhardwaj/Lean4Agent">Lean4Agent</a>.</p>
         <p>Before joining IIT Delhi, I completed my <strong>M.Sc in Mathematics and Computing</strong> at Banaras Hindu University (BHU), Varanasi, where I worked at the DST-CIMS. My Master’s thesis was on <a href="/files/master-thesis.pdf">Discrete Differential Geometry and its Applications</a>, supervised by Prof. Bankteshwar Tiwari.</p>
-        <p>My academic journey began with a <strong>B.Sc (Hons) in Applied Mathematics</strong> from Jamia Millia Islamia, New Delhi. I also completed a <a href="https://gist.github.com/ajeetkbhardwaj/8b032fe2edc7f64b6a4d2a4295241622">Data Science Specialization</a> through NPTEL (IIT Madras), strengthening my skills in <strong>Programming, Data Analytics, Machine Learning, and Large Language Models</strong>.</p>
+        <p>My academic journey began with a <strong>B.Sc (Hons) in Applied Mathematics</strong> from Jamia Millia Islamia, New Delhi. I also completed an <a href="https://github.com/ajeetkbhardwaj/Course-AI">Artificial Intelligence and Data Science Specialization</a> through NPTEL, IIT Madras, strengthening my skills in <strong>Programming, Data Analytics, Machine Learning, and Large Language Models</strong>.</p>
       </div>
       <aside class="focus-card" aria-label="Research interests">
         <p class="card-label">Research interests</p>
@@ -81,7 +81,14 @@ title: "Portfolio"
         <h3>Applied Mathematics</h3>
         <p class="institution">Jamia Millia Islamia</p>
         <p class="education-meta">New Delhi</p>
-        <p>Completed a Data Science Specialization through NPTEL (IIT Madras).</p>
+      </article>
+      <article class="education-card">
+        <p class="degree">Specialization</p>
+        <h3>Artificial Intelligence &amp; Data Science</h3>
+        <p class="institution">NPTEL · IIT Madras</p>
+        <p class="education-meta">Online Certification</p>
+        <p>Coursework spanning programming, data analysis, machine learning, deep learning, and large language models.</p>
+        <a class="education-link" href="https://github.com/ajeetkbhardwaj/Course-AI" target="_blank" rel="noopener">View specialization &rarr;</a>
       </article>
     </div>
   </div>
@@ -97,26 +104,30 @@ title: "Portfolio"
       <article class="skill-card">
         <h3>Programming</h3>
         <ul class="skill-tags"><li>Python</li><li>C/C++</li><li>SQL</li></ul>
+        <a class="skill-credential" href="https://github.com/ajeetkbhardwaj/Course-AI" target="_blank" rel="noopener">Programming coursework &rarr;</a>
       </article>
       <article class="skill-card">
-        <h3>Machine Learning & LLMs</h3>
+        <h3>Machine Learning &amp; LLMs</h3>
         <ul class="skill-tags"><li>Transformers</li><li>PyTorch</li><li>MLX</li><li>LangGraph</li><li>RAG</li><li>Agentic systems</li></ul>
+        <a class="skill-credential" href="https://github.com/ajeetkbhardwaj/Course-AI" target="_blank" rel="noopener">AI &amp; ML certificates &rarr;</a>
       </article>
       <article class="skill-card">
         <h3>Mathematics</h3>
         <ul class="skill-tags"><li>PDEs</li><li>Differential geometry</li><li>Linear algebra</li><li>Quantum computing</li></ul>
       </article>
       <article class="skill-card">
-        <h3>Tools & Frameworks</h3>
+        <h3>Tools &amp; Frameworks</h3>
         <ul class="skill-tags"><li>Git</li><li>Docker</li><li>Jekyll</li><li>Streamlit</li><li>Flask</li></ul>
       </article>
       <article class="skill-card">
-        <h3>Systems & HPC</h3>
+        <h3>Systems &amp; HPC</h3>
         <ul class="skill-tags"><li>Distributed computing</li><li>OpenMP</li><li>Lean4</li></ul>
+        <a class="skill-credential" href="https://github.com/ajeetkbhardwaj/Course-AI" target="_blank" rel="noopener">Data systems certificate &rarr;</a>
       </article>
       <article class="skill-card">
         <h3>Data Science</h3>
         <ul class="skill-tags"><li>NumPy</li><li>pandas</li><li>scikit-learn</li><li>Analytics</li><li>Visualization</li></ul>
+        <a class="skill-credential" href="https://github.com/ajeetkbhardwaj/Course-AI" target="_blank" rel="noopener">NPTEL specialization &rarr;</a>
       </article>
     </div>
   </div>
@@ -124,4 +135,3 @@ title: "Portfolio"
 
 {% include sections/projects.html %}
 {% include sections/publications.html %}
-{% include sections/contact.html %}

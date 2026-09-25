@@ -392,28 +392,15 @@ section h2 {
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
 }
 
 .education-card {
-  position: relative;
-  padding: 28px;
-  overflow: hidden;
+  padding: 22px;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 14px;
   background: #fbfcff;
-  box-shadow: var(--shadow);
-}
-
-.education-card::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 4px;
-  background: var(--accent);
-  content: "";
 }
 
 .education-card .degree {
@@ -497,16 +484,12 @@ section h2 {
   font-weight: 650;
 }
 
-.skills-credentials {
-  margin-top: 22px;
-  color: var(--muted);
-  font-size: 0.88rem;
-  text-align: center;
-}
-
-.skills-credentials a {
+.skill-credential {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--accent-dark);
+  font-size: 0.8rem;
   font-weight: 750;
-  overflow-wrap: anywhere;
 }
 
 .card-grid {
@@ -630,42 +613,33 @@ section h2 {
 }
 
 footer {
-  padding: 24px 0;
+  padding: 20px 0;
   border-top: 1px solid var(--border);
-  background: #fbfcff;
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.84rem;
 }
 
 .footer-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 4px 14px;
 }
 
 .footer-links a {
-  padding: 5px 9px;
-  border: 1px solid var(--border);
-  border-radius: 7px;
-  background: var(--surface);
   color: #526075;
   font-weight: 700;
-  text-decoration: none;
 }
 
 .footer-links a:hover {
-  border-color: #b7c7ef;
-  background: var(--accent-soft);
   color: var(--accent-dark);
-  text-decoration: none;
 }
 
 .prose h2 {
