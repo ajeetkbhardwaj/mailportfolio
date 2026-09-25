@@ -1,0 +1,18 @@
+<section id="publications">
+  <div class="container">
+    <h2>Publications</h2>
+    {% assign pubs = site.publications | sort: "date" | reverse %}
+    {% for pub in pubs %}
+    <div class="list-item">
+      <h3>{{ pub.title }}</h3>
+      <div class="venue">
+        {% if pub.venue %}{{ pub.venue }} &middot; {% endif %}
+        {{ pub.date | date: "%Y" }}
+      </div>
+      <p>{{ pub.excerpt | strip_html | truncate: 260 }}</p>
+      {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Paper &rarr;</a>{% endif %}
+      {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>

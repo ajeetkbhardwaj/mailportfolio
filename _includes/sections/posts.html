@@ -1,0 +1,12 @@
+<section class="section-alt" id="posts">
+  <div class="container">
+    <h2>Recent Posts</h2>
+    {% assign all_posts = site.posts | sort: "date" | reverse %}
+    {% for post in all_posts limit: 6 %}
+    <div class="list-item">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <div class="venue">{{ post.date | date: "%B %d, %Y" }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

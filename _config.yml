@@ -1,0 +1,49 @@
+# portproxy — standalone single-page portfolio (Jekyll)
+# Preview:  cd portproxy && jekyll serve
+# Deploy:   push this folder to your GitHub Pages repo; set baseurl below
+#           to "/portproxy" when hosted at https://ajeetkbhardwaj.github.io/mailportfolio/
+
+title: "Ajeet Kumar"
+name: "Ajeet Kumar"
+description: "Applied Mathematician with Specialization in Full Stack Machine Learning and Data Science"
+email: "ajeetkamla7897@gmail.com"
+avatar: "/images/Profile2.png"
+
+url: "https://ajeetkbhardwaj.github.io"
+baseurl: "/mailportfolio" # "" when deployed at the site root, "/portproxy" when hosted in the portproxy subfolder
+
+# Collections — write your content as markdown here and it is rendered below.
+collections:
+  portfolio:
+    output: false
+  publications:
+    output: false
+  posts:
+    output: false
+
+defaults:
+  - scope:
+      path: "_portfolio"
+    values:
+      layout: single
+  - scope:
+      path: "_publications"
+    values:
+      layout: single
+  - scope:
+      path: "_posts"
+    values:
+      layout: single
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+encoding: "utf-8"
+future: true
+
+# Outputting
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-feed

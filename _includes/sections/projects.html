@@ -1,0 +1,23 @@
+<section class="section-alt" id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      {% for item in site.portfolio %}
+      <div class="card">
+        {% if item.cover %}
+        <img class="cover" src="{{ item.cover | relative_url }}" alt="{{ item.title }}">
+        {% endif %}
+        <div class="body">
+          {% if item.category %}<div class="cat">{{ item.category }}</div>{% endif %}
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.excerpt | strip_html | truncate: 180 }}</p>
+        </div>
+        <div class="links">
+          {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">View on GitHub &rarr;</a>{% endif %}
+          {% if item.details %}<a href="{{ item.details | relative_url }}">Details</a>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

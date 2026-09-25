@@ -1,0 +1,29 @@
+{% include head.html %}
+<body>
+
+{% include nav.html %}
+
+<main>
+
+<header class="hero" id="about">
+  <div class="container">
+    <div class="hero-pic">
+      <img src="{{ site.avatar | relative_url }}" alt="{{ site.name }}">
+    </div>
+    <div class="hero-text">
+      <h1>Hi, I'm {% if site.name %}{{ site.name | split: " " | first }}.{% else %}me.{% endif %}</h1>
+      <div class="tagline">{{ site.description }}</div>
+      <p class="bio">{{ page.hero_bio | default: site.description }}</p>
+      <a class="btn btn-primary" href="mailto:{{ site.email }}">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+{{ content }}
+
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>
