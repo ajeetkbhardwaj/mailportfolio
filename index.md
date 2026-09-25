@@ -12,7 +12,7 @@ title: "Portfolio"
   - Projects, Publications and Posts are pulled AUTOMATICALLY from
     the _portfolio/, _publications/ and _posts/ folders, so you only
     ever edit markdown files, never HTML.
-  - Add/remove a section by adding/removing the {% include %} line
+  - Add/remove a section by adding/removing the include directive
     for it further down.
 ================================================================ -->
 
