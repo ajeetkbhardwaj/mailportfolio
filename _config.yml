@@ -5,7 +5,7 @@
 
 title: "Ajeet Kumar"
 name: "Ajeet Kumar"
-description: "Applied Mathematician with Specialization in Full Stack Machine Learning and Data Science"
+description: "Applied mathematician specializing in full-stack machine learning and data science"
 email: "ajeetkamla7897@gmail.com"
 avatar: "/images/Profile2.png"
 
@@ -18,8 +18,9 @@ collections:
     output: false
   publications:
     output: false
-  posts:
-    output: false
+
+exclude:
+  - _posts
 
 defaults:
   - scope:
@@ -28,10 +29,6 @@ defaults:
       layout: single
   - scope:
       path: "_publications"
-    values:
-      layout: single
-  - scope:
-      path: "_posts"
     values:
       layout: single
 
@@ -43,7 +40,3 @@ future: true
 
 # Outputting
 permalink: pretty
-
-# Plugins
-plugins:
-  - jekyll-feed

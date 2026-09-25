@@ -5,7 +5,7 @@
 
 <main>
 
-<header class="hero" id="about">
+<header class="hero" id="home">
   <div class="container">
     <div class="hero-pic">
       <img src="{{ site.avatar | relative_url }}" alt="{{ site.name }}">
@@ -13,8 +13,10 @@
     <div class="hero-text">
       <h1>Hi, I'm {% if site.name %}{{ site.name | split: " " | first }}.{% else %}me.{% endif %}</h1>
       <div class="tagline">{{ site.description }}</div>
-      <p class="bio">{{ page.hero_bio | default: site.description }}</p>
-      <a class="btn btn-primary" href="mailto:{{ site.email }}">Get in Touch</a>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:{{ site.email }}">Get in touch</a>
+        <a class="btn btn-secondary" href="https://github.com/ajeetkbhardwaj" target="_blank" rel="noopener">View GitHub</a>
+      </div>
     </div>
   </div>
 </header>
