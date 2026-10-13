@@ -19,10 +19,11 @@ collections:
   publications:
     output: false
 
-exclude:
-  - _posts
-
 defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: single
   - scope:
       path: "_portfolio"
     values:

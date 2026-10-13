@@ -135,3 +135,4 @@ title: "Portfolio"
 
 {% include sections/projects.html %}
 {% include sections/publications.html %}
+{% include sections/posts.html %}
