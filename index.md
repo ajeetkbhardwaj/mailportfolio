@@ -133,6 +133,6 @@ title: "Portfolio"
   </div>
 </section>
 
-{% include sections/projects.html %}
-{% include sections/publications.html %}
-{% include sections/posts.html %}
+{% include sections/projects.html limit=3 %}
+{% include sections/publications.html limit=3 %}
+{% include sections/posts.html limit=3 %}

@@ -2,7 +2,8 @@
   <div class="container">
     <h2>Projects</h2>
     <div class="card-grid">
-      {% for item in site.portfolio %}
+      {% assign lim = include.limit | default: 1000 %}
+      {% for item in site.portfolio limit: lim %}
       <div class="card">
         {% if item.cover %}
         <img class="cover" src="{{ item.cover | relative_url }}" alt="{{ item.title }}">
@@ -19,5 +20,10 @@
       </div>
       {% endfor %}
     </div>
+    {% if include.limit %}
+    <div class="section-more">
+      <a href="{{ '/projects/' | relative_url }}">View all projects &rarr;</a>
+    </div>
+    {% endif %}
   </div>
 </section>

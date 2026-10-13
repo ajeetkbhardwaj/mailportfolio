@@ -1,8 +1,9 @@
 <section id="publications">
   <div class="container">
     <h2>Publications</h2>
+    {% assign lim = include.limit | default: 1000 %}
     {% assign pubs = site.publications | sort: "date" | reverse %}
-    {% for pub in pubs %}
+    {% for pub in pubs limit: lim %}
     <div class="list-item">
       <h3>{{ pub.title }}</h3>
       <div class="venue">
@@ -14,5 +15,10 @@
       {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" target="_blank" rel="noopener">Slides</a>{% endif %}
     </div>
     {% endfor %}
+    {% if include.limit %}
+    <div class="section-more">
+      <a href="{{ '/publications/' | relative_url }}">View all publications &rarr;</a>
+    </div>
+    {% endif %}
   </div>
 </section>

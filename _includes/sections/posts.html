@@ -4,17 +4,29 @@
       <p class="eyebrow">Writing</p>
       <h2>Recent Posts</h2>
     </div>
-    {% assign all_posts = site.posts | sort: "date" | reverse %}
-    {% for post in all_posts limit: 6 %}
-    <div class="list-item{% if post.cover %} has-cover{% endif %}">
-      {% if post.cover %}<img class="cover" src="{{ post.cover | relative_url }}" alt="{{ post.title }}">{% endif %}
-      <div class="list-item-body">
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <div class="venue">{{ post.date | date: "%B %d, %Y" }}</div>
-      {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 200 }}</p>{% endif %}
-      <a href="{{ post.url | relative_url }}">Read post &rarr;</a>
+    <div class="card-grid">
+      {% assign lim = include.limit | default: 1000 %}
+      {% assign all_posts = site.posts | sort: "date" | reverse %}
+      {% for post in all_posts limit: lim %}
+      <div class="card">
+        {% if post.cover %}
+        <img class="cover" src="{{ post.cover | relative_url }}" alt="{{ post.title }}">
+        {% endif %}
+        <div class="body">
+          <div class="cat">{{ post.date | date: "%B %d, %Y" }}</div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        </div>
+        <div class="links">
+          <a href="{{ post.url | relative_url }}">Read post &rarr;</a>
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+    {% if include.limit %}
+    <div class="section-more">
+      <a href="{{ '/writing/' | relative_url }}">View all posts &rarr;</a>
+    </div>
+    {% endif %}
   </div>
 </section>

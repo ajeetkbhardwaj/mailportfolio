@@ -589,6 +589,15 @@ section h2 {
   font-weight: 600;
 }
 
+.section-more {
+  margin-top: 28px;
+}
+
+.section-more a {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 /* ---------- Publications / list ---------- */
 
 .list-item {
