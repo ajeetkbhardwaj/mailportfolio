@@ -609,6 +609,16 @@ section h2 {
   font-size: 1.3rem;
 }
 
+.list-item img.cover {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 18px;
+  background: var(--surface-soft);
+}
+
 .list-item .venue {
   margin-bottom: 9px;
   color: var(--muted);
