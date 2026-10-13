@@ -1,10 +1,12 @@
 ---
 title: "History of Deep Learning: From Biological Neurons to the Frontier AI Models"
 date: 2026-04-27
+cover: "/images/posts/blog_spectral_graph_laplacian.jpg"
 excerpt: "Even Before neural networks existed in silicon, the fundamental question was: what does the nervous system actually look like? Two competing views emerged in the 1870s and the resulting debate lasted decades."
 ---
 
- 
+![Networks of interacting units — from biological neurons to artificial ones]({{ '/images/posts/blog_spectral_graph_laplacian.jpg' | relative_url }})
+*One motif runs through this entire history: discrete processing units, wired together, computing collectively.*
 
 ## Table of Contents
 
