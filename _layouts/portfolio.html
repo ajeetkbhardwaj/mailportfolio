@@ -11,11 +11,13 @@
       <img src="{{ site.avatar | relative_url }}" alt="{{ site.name }}">
     </div>
     <div class="hero-text">
-      <h1>Hi, I'm {% if site.name %}{{ site.name | split: " " | first }}.{% else %}me.{% endif %}</h1>
+      <p class="hero-role">Applied Mathematics &middot; ML Systems &middot; Formal Verification</p>
+      <h1>{{ site.name }}</h1>
+      <p class="hero-position">I build verifiable AI and mathematical computing systems — from Lean 4 proof agents to scientific ML software.</p>
       <div class="tagline">{{ site.description }}</div>
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:{{ site.email }}">Get in touch</a>
-        <a class="btn btn-secondary" href="https://github.com/ajeetkbhardwaj" target="_blank" rel="noopener">View GitHub</a>
+        <a class="btn btn-secondary" href="https://github.com/ajeetkbhardwaj" target="_blank" rel="noopener">GitHub</a>
         <a class="btn btn-secondary" href="https://www.linkedin.com/in/ajeetkumar09" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
