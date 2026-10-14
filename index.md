@@ -26,9 +26,76 @@ title: "Portfolio"
   </div>
 </section>
 
-{% include sections/experience.html limit=3 %}
+<section id="experience">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Career</p>
+      <h2>Experience</h2>
+    </div>
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-date">Jun 2025 – Present</div>
+        <div class="timeline-content">
+          <div class="timeline-heading">
+            <h3>Research Intern & Project Assistant</h3>
+            <span class="status-badge">Current</span>
+          </div>
+          <p class="organisation">Cloud Computing Lab & HIPC Lab · IIT Delhi</p>
+          <p>Built <strong>Speculator</strong>, an LLM system for OpenAPI specification generation from source code, and designed <strong>Lean4Agent</strong>, a multi-agent system that generates Lean4 code and formal proofs from natural-language mathematical problems.</p>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-date">Jul 2024</div>
+        <div class="timeline-content">
+          <h3>QWorld Quantum Research</h3>
+          <p>Solved the wave PDE using the HHL quantum algorithm (Qiskit) and implemented Variational Quantum Algorithms such as VQEs.</p>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-date">Feb 2024</div>
+        <div class="timeline-content">
+          <h3>Machine Learning Intern · Devtern</h3>
+          <p>Developed end-to-end ML pipelines for production applications.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-{% include sections/education.html limit=3 %}
+<section class="section-alt" id="education">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Academic background</p>
+      <h2>Education</h2>
+    </div>
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-date">Master&rsquo;s Degree</div>
+        <div class="timeline-content">
+          <h3>Mathematics and Computing</h3>
+          <p class="organisation">Banaras Hindu University (BHU) &middot; Varanasi</p>
+          <p>Worked at the DST-CIMS. Master&rsquo;s thesis on <em>Discrete Differential Geometry and its Applications</em>, supervised by Prof. Bankteshwar Tiwari.</p>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-date">Bachelor&rsquo;s Degree (Hons)</div>
+        <div class="timeline-content">
+          <h3>Applied Mathematics</h3>
+          <p class="organisation">Jamia Millia Islamia &middot; New Delhi</p>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-date">Specialization</div>
+        <div class="timeline-content">
+          <h3>Artificial Intelligence &amp; Data Science</h3>
+          <p class="organisation">NPTEL &middot; IIT Madras</p>
+          <p>Coursework spanning programming, data analysis, machine learning, deep learning, and large language models.</p>
+          <a href="https://github.com/ajeetkbhardwaj/Course-AI" target="_blank" rel="noopener">View specialization &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 <section id="skills">
   <div class="container">
