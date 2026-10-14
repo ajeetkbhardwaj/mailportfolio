@@ -18,10 +18,6 @@ collections:
     output: false
   publications:
     output: false
-  experience:
-    output: false
-  education:
-    output: false
 
 defaults:
   - scope:
